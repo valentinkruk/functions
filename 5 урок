@@ -1,0 +1,70 @@
+// №1 задача
+function checkOption(arr, em){
+	for(let i of arr){
+		if(em.includes(i) == false){
+			getList.push(i);
+		}
+	}
+}
+
+let getList = []; // Новый список
+
+let listEm = ['Valik@mail.ru', 'Valik@mai.ru', 'Valik@mru',
+	'Valik@mail.by','Valik@gmail.ru','Vak@mail.ru',
+	 'Val@mail.ru', 'sveta159@gmail.com'
+ ] // Исходный список
+
+let listBlack = ['Valik@gmail.ru','Vak@mail.ru'] // Чёрный список
+
+checkOption(listEm, listBlack);
+console.log(getList);
+
+
+№2 Задача .Есть список email адресов,
+отсортировать и удалить те адреса, которые имееют mail.ru  
+
+let listEm = ['Valik@mail.ru', 'Valik@mai.ru', 'Valik@mru',
+	'Valik@mail.by', 'Valik@gmail.ru', 'Vak@mail.ru',
+	'Val@mail.ru', 'sveta159@gmail.com'
+] // Исходный список
+
+let getList = []; // Новый список
+let str = 'mail.ru'
+function getL(arr) {
+	for (let elem of arr) {
+		if (elem.endsWith('@' + str) == false) {
+			getList.push(elem);
+		}
+	}
+}
+getL(listEm, str);
+console.log(getList);
+
+№3 Задача
+
+let sum;
+let saleOne = 'ДАРИМ300';
+let saleTwo = 'СКИДКА15';
+
+function calcPrice(sum, quantity, sale) {
+	if(sum < 300){
+		sum = 0;
+	}
+	if(sale == 'ДАРИМ300'){
+		sum = sum - 300;
+	}
+	if(quantity >= 10){
+		sum = sum - sum * 0.05;
+	}
+	if(sum > 50000){
+		sum = sum - ((sum - 50000) * 0.2);
+	}
+	if(sale == 'СКИДКА15' && sum >= 20000){
+		sum = sum - sum * 0.15;
+	}
+
+	return sum;
+}
+
+let result = calcPrice(80000, 20, saleOne);
+console.log(result);
