@@ -20,8 +20,8 @@ checkOption(listEm, listBlack);
 console.log(getList);
 
 
-№2 Задача .Есть список email адресов,
-отсортировать и удалить те адреса, которые имееют mail.ru  
+// №2 Задача .Есть список email адресов,
+// отсортировать и удалить те адреса, которые имееют mail.ru  
 
 let listEm = ['Valik@mail.ru', 'Valik@mai.ru', 'Valik@mru',
 	'Valik@mail.by', 'Valik@gmail.ru', 'Vak@mail.ru',
@@ -40,7 +40,7 @@ function getL(arr) {
 getL(listEm, str);
 console.log(getList);
 
-№3 Задача
+// №3 Задача
 
 let sum;
 let saleOne = 'ДАРИМ300';
